@@ -2,7 +2,7 @@
 
 angular.module('EaseApp')
 	.directive('easeNavbar', () ->
-		templateUrl: 'views/partials/ease-navbar.html'
+		templateUrl: 'views/ease-navbar-base.html'
 		restrict: 'E'
 		link: (scope, element, attrs) ->
 			scope.alarmTabs= [
