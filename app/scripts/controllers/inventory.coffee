@@ -1,11 +1,10 @@
 'use strict'
 
 angular.module('EaseApp')
-	.controller 'InventoryCtrl', ($scope, inventoryItems) ->
+	.controller 'InventoryCtrl', ($scope, InventoryItems) ->
 		$scope.openNewItemForm = no
 
-		items = inventoryItems.getItems()
-		console.log items
+		items = InventoryItems.getItems()
 
 		$scope.people = [
 			{sku: 40244850, name: "Micke", quantity: 40, purchasePrice: 39.99, salesPrice: 79.99},

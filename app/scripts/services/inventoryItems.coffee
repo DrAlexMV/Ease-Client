@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('EaseApp')
-	.factory 'inventoryItems', (Restangular) ->
+	.factory 'InventoryItems', (Restangular) ->
 		# Service logic
-		baseInventoryRequest = Restangular.all 'data/petshop/austin'
-		getSuccesful = (items) ->
+		baseInventoryRequest = Restangular.all 'sweatshop/'
+		getSuccesful = (inventory) ->
 			console.log 'Succesful inventory pull'
-			return items
-		getUnsuccesful = () ->
+		getUnsuccesful = (res) ->
 			console.log 'Error pulling inventory items'
+			console.log res
 
 		# Public API 
 		{

@@ -1,19 +1,23 @@
 'use strict'
 
 angular.module('EaseApp')
-	.controller 'LoginCtrl', ($scope, Restangular) ->
-		account = Restangular.all 'login'
+	.controller 'LoginCtrl', ($scope, Restangular, InventoryItems) ->
 		$scope.loginInformation = 
 			{
 				username: ''
 				password: ''	
 			}
+		## Login callbacks
 		succesfulLogin = (res) ->
 			console.log res
-		unsuccesfulLogin = () ->
-			console.log "Bad"
+			items = InventoryItems.getItems()
+		unsuccesfulLogin = (res) ->
+			console.log res 
 			console.log $scope.loginInformation
+		## Login 
 		$scope.login = () ->
-			account.post($scope.loginInformation).then succesfulLogin, unsuccesfulLogin
-
+			Restangular
+			.allUrl('login', 'http://ease.herokuapp.com/login')
+			.post($scope.loginInformation)
+			.then succesfulLogin, unsuccesfulLogin
 
