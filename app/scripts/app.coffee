@@ -3,7 +3,7 @@
 angular.module('EaseApp', ['ui.bootstrap','smartTable.table', 'snap', 'restangular'])
   .config ($routeProvider, RestangularProvider) ->
     RestangularProvider
-      .setBaseUrl('http://ease.herokuapp.com/data')
+      .setBaseUrl('http://localhost:3000/data')
     $routeProvider
       .when '/',
         templateUrl: 'views/main.html'

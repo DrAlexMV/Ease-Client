@@ -10,14 +10,13 @@ angular.module('EaseApp')
 		## Login callbacks
 		succesfulLogin = (res) ->
 			console.log res
-			items = InventoryItems.getItems()
 		unsuccesfulLogin = (res) ->
 			console.log res 
 			console.log $scope.loginInformation
 		## Login 
 		$scope.login = () ->
 			Restangular
-			.allUrl('login', 'http://ease.herokuapp.com/login')
+			.allUrl('login', 'http://localhost:3000/login')
 			.post($scope.loginInformation)
 			.then succesfulLogin, unsuccesfulLogin
 
