@@ -14,7 +14,7 @@
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="bower_components/snapjs/snap.css">
     <link rel="stylesheet" type="text/css" href="bower_components/angular-snap/angular-snap.min.css">
-        <link rel="stylesheet" href="styles/f3b12f69.main.css">
+        <link rel="stylesheet" href="styles/4369032a.main.css">
 </head>
   <body ng-app="EaseApp">
     <!--[if lt IE 7]>
@@ -27,8 +27,40 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <ease-navbar></ease-navbar>
-    <div class="container" ng-view=""></div>
+    <div class="snap-drawers">
+        <snap-drawer>
+            <ul class="nav nav-pills nav-stacked">
+                <li>
+                    <a href="">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="icon-dashboard icon-2x"></i>
+                            </span>
+                            <span class="pull-right">
+                                Dashboard
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/inventory">
+                        <div class="clearfix">
+                            <span class="pull-left">
+                                <i class="icon-table icon-2x"></i>
+                            </span>
+                            <span class="pull-right">
+                                Inventory
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </snap-drawer>
+    </div>
+        <snap-content id="content" class="scrollable" snap-options="{disable: right}">
+            <ease-navbar></ease-navbar>
+            <div class="container" ng-view=""></div>
+        </snap-content>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -41,7 +73,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
     <script type="text/javascript" src="bower_components/restangular/dist/restangular.min.js"></script>
     <script type="text/javascript" src="bower_components/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
     <script type="text/javascript" src="bower_components/smart-table/Smart-Table.debug.js"></script>
     <script type="text/javascript" src="bower_components/snapjs/snap.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-snap/angular-snap.min.js"></script>
@@ -49,6 +81,6 @@
 
         <script src="scripts/25e920e4.modules.js"></script>
 
-        <script src="scripts/c8d2bad3.scripts.js"></script>
+        <script src="scripts/aba9c7c1.scripts.js"></script>
 </body>
 </html>
