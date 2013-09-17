@@ -15,13 +15,23 @@ angular.module('EaseApp')
 		getUnsuccesful = (res) ->
 			console.log 'Error pulling inventory items'
 
+		removeSuccesful = (item) ->
+			$rootScope.$broadcast 'itemDeleted'
+
+		removeUnsuccesful = () ->
+			console.log 'Error deleting item'
+
 		# Public API 
 		{
 		  requestItems: () ->
-		  	requestWasSuccesful = false
+		  	requestWasSuccesful = no
 		  	baseInventoryRequest
 		  	.one('inventory')
 		  	.getList().then getSuccesful, getUnsuccesful
 		  getItems: () ->
 		  	items	
+		  removeItem: (item) ->
+		  	baseInventoryRequest
+		  	.one('inventory', item.sku)
+		  	.remove().then removeSuccesful, removeUnsuccesful
 		}

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="bower_components/snapjs/snap.css">
     <link rel="stylesheet" type="text/css" href="bower_components/angular-snap/angular-snap.min.css">
@@ -29,8 +29,40 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <ease-navbar></ease-navbar>
-    <div class="container" ng-view=""></div>
+    <div class='snap-drawers'>
+        <snap-drawer>
+            <ul class='nav nav-pills nav-stacked'>
+                <li>
+                    <a href="">
+                        <div class='clearfix'>
+                            <span class='pull-left'>
+                                <i class='icon-dashboard icon-2x'></i>
+                            </span>
+                            <span class='pull-right'>
+                                Dashboard
+                            </span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/inventory">
+                        <div class='clearfix'>
+                            <span class='pull-left'>
+                                <i class='icon-table icon-2x'></i>
+                            </span>
+                            <span class='pull-right'>
+                                Inventory
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </snap-drawer>
+    </div>
+    <snap-content id='content' class='' snap-options=''>
+        <ease-navbar></ease-navbar>
+        <div class="container" ng-view=""></div>
+    </snap-content>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
       var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
@@ -42,12 +74,13 @@
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="bower_components/restangular/dist/restangular.min.js"></script>
-    <script type="text/javascript" src="bower_components/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls-0.6.0-SNAPSHOT.min.js"></script>
     <script type="text/javascript" src="bower_components/smart-table/Smart-Table.debug.js"></script>
     <script type="text/javascript" src="bower_components/snapjs/snap.min.js"></script>
     <script type="text/javascript" src="bower_components/angular-snap/angular-snap.min.js"></script>
     <script type="text/javascript" src="bower_components/lodash/dist/lodash.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-google-chart/ng-google-chart.js"></script>
 
         <!-- build:js scripts/modules.js -->
         <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -62,6 +95,9 @@
         <script src="scripts/directives/ease-navbar-base.js"></script>
         <script src="scripts/services/InventoryItems.js"></script>
         <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/services/InventoryFilters.js"></script>
+        <script src="scripts/directives/ease-progressbar.js"></script>
+        <script src="scripts/directives/ease-modal.js"></script>
         <!-- endbuild -->
 </body>
 </html>

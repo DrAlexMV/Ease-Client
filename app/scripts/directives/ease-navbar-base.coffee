@@ -11,7 +11,6 @@ angular.module('EaseApp')
 					iconClass: 'icon-table icon-large'
 					badgeClass: 'badge'
 					badgeNotificationNumber: 5
-
 				}
 				{
 					hide: true

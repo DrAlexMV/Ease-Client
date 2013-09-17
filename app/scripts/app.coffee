@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('EaseApp', ['ui.bootstrap','smartTable.table', 'snap', 'restangular'])
+angular.module('EaseApp', ['ui.bootstrap','smartTable.table', 'snap', 'restangular', 'googlechart'])
   .config ($routeProvider, RestangularProvider) ->
     RestangularProvider
       .setBaseUrl('http://localhost:3000/data')

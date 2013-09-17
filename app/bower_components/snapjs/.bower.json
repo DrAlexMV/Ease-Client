@@ -15,12 +15,14 @@
     "snap.js"
   ],
   "homepage": "https://github.com/jakiestfu/Snap.js",
-  "_release": "8d9978abd4",
+  "_release": "master",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "8d9978abd4ae99585c8b1f252925de93b96f744d"
+    "commit": "f5e8a7798ff02e85149dbcba3a796a83fc07d9d3"
   },
   "_source": "git://github.com/jakiestfu/Snap.js.git",
-  "_target": "*"
+  "_target": "*",
+  "_originalSource": "snapjs",
+  "_direct": true
 }

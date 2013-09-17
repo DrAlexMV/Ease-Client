@@ -1,22 +1,40 @@
-<div class="page-header">
-	<h1>Inventory</h1>
+<ol class="breadcrumb">
+	<li><a href="#/dashboard">Dashboard</a></li>
+	<li><a href="#/inventory">Inventory</a></li>
+</ol>
+<div class='container'>
+	<h2>Overview</h2>
+	<div>
+	</div>
+	<div class='pull-left' style='width: 40%'>
+		<ease-progressbar percent='80'></ease-progressbar>
+		<div>
+			<p><h4>Total Inventory</h4></p>
+			<p>234 items in Stock</p>
+			<p>54 items backordered</p>
+			<p>34 items out of Stock</p>
+		</div>
+	</div>
+	<div class='panel panel-info pull-right'>
+		<div class="panel-heading">
+			<div class='panel-title' style="width:350px">Categories</div>
+		</div>	
+		<div google-chart chart="chart" style="{{chart.cssStyle}}"/>		
+	</div>
 </div>
-<div>
+<div class='container'>
+	<h2>Inventory</h2>
 	<smart-table class='table table-hover' config="globalConfig" rows="items" columns="tableHeaders">
 	</smart-table>
 </div>
-
-<hr>
-<div modal="openNewItemForm" close="closeNewItemForm()" options="newItemDialogOptions">
+<ease-modal options="addItemModal">
 	<div class="modal-header">
-		<h3>Add a new Item</h3>
+		<h4 class="modal-title">Add a new Item</h4>
 	</div>
 	<div class="modal-body">
-		<form>
-		</form>
 	</div>
 	<div class="modal-footer">
-		<input class="submit">
-		<button class="btn btn-danger">Close</button>
 	</div>
-</div>
+</ease-modal>
+<hr>
+
