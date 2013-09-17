@@ -1,0 +1,11 @@
+{
+  "name": "angular-google-chart",
+  "version": "0.0.2",
+  "main": "ng-google-chart.js",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {},
+  "devDependencies": {}
+}
