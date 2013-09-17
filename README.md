@@ -1,4 +1,4 @@
-ease-client
+Ease Client
 ===========
 
 AngularJS Client for Ease and associated libraries
